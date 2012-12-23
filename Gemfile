@@ -6,8 +6,9 @@ gem 'sinatra-contrib', :require => ['sinatra/content_for', 'sinatra/respond_with
 gem 'haml'
 gem 'coffee-script'
 gem 'sass'
+gem 'compass'
+gem 'bootstrap-sass', '~> 2.1.0'
 gem 'sprockets'
-
 
 group :test do
   gem 'rspec', :require => "rspec/core/rake_task"

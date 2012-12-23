@@ -1,1 +1,1 @@
-rvm 1.9.3@sinatra_blog --create
+rvm 1.9.3-p327@sinatra_blog --create

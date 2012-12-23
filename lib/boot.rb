@@ -8,9 +8,10 @@ Dir[APP_ROOT.join('lib/**/*.rb')].each { |path| require path }
 
 require APP_ROOT.join('app')
 App.use SprocketsMiddleware, %r{/assets} do |env|
-  env.append_path 'assets/js'
-  env.append_path 'assets/css'
-  env.append_path 'assets/libs'
+  %w[stylesheets javascripts images].each do |type|
+    env.append_path "assets/#{type}/"
+    env.append_path Compass::Frameworks['bootstrap'].templates_directory + "/../vendor/assets/#{type}/"
+  end
 end
 
 App.controllers.each { |path| require path }
