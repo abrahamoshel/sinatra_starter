@@ -18,15 +18,14 @@
 
 get the code
 
-  git clone git://github.com/abrahamoshel/sinatra_starter.git
+> git clone git://github.com/abrahamoshel/sinatra_starter.git
 
 install the dependancies
 
-  bundle install
+> bundle install
 
 start the app up with which way you prefer:
-
-  bundle exec thin start
-  script/server
+> bundle exec thin start
+> script/server
 
 #### You should be off to the races
