@@ -6,8 +6,7 @@ gem 'sinatra-contrib', :require => ['sinatra/content_for', 'sinatra/respond_with
 gem 'haml'
 gem 'coffee-script'
 gem 'sass'
-gem 'compass'
-gem 'bootstrap-sass', '~> 2.1.0'
+gem 'zurb-foundation'
 gem 'sprockets'
 
 group :test do

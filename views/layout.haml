@@ -11,14 +11,79 @@
     /[if lt IE 9]
       %script{src: '//html5shim.googlecode.com/svn/trunk/html5.js', type: 'text/javascript'}
   %body
-    .navbar.navbar-fixed-top
-      .container
-        = partial('shared/topbar')
-    .container
-      .content
-        -# flash_messages
-        = yield
+    %nav.top-bar{:style => ""}
+      %ul
+        / Title Area
+        %li.name
+          %h1
+            %a{:href => "#"}
+              Top Bar Title
+        %li.toggle-topbar
+          %a{:href => "#"}
+      %section
+        / Right Nav Section
+        %ul.right
+          %li.divider
+          %li.has-dropdown
+            %a{:href => "#"} Main Item 1
+            %ul.dropdown
+              %li.title.back.js-generated{:style => ""}
+                %h5
+                  %a{:href => "#"} Main Item 1
+              %li
+                %label Section Name
+              %li.has-dropdown
+                %a{:href => "#"} Has Dropdown, Level 1
+                %ul.dropdown
+                  %li.title.back.js-generated
+                    %h5
+                      %a{:href => "#"} Has Dropdown, Level 1
+                  %li
+                    %a{:href => "#"} Dropdown Options
+                  %li
+                    %a{:href => "#"} Dropdown Options
+                  %li
+                    %a{:href => "#"} Level 2
+                  %li
+                    %a{:href => "#"} Subdropdown Option
+                  %li
+                    %a{:href => "#"} Subdropdown Option
+                  %li
+                    %a{:href => "#"} Subdropdown Option
+              %li
+                %a{:href => "#"} Dropdown Option
+              %li
+                %a{:href => "#"} Dropdown Option
+              %li.divider
+              %li
+                %label Section Name
+              %li
+                %a{:href => "#"} Dropdown Option
+              %li
+                %a{:href => "#"} Dropdown Option
+              %li
+                %a{:href => "#"} Dropdown Option
+              %li.divider
+              %li
+                %a{:href => "#"} See all →
+          %li.divider
+          %li
+            %a{:href => "#"} Main Item 2
 
-    %footer.navbar-fixed-bottom
-      .container
-        %p © Abraham Oshel #{Date.today.year}
+    .row
+      .twelve.columns
+        = yield
+    #copyright
+      .row
+        .four.columns
+          %p © Abraham Oshel #{Date.today.year}
+        .two.columns
+          %ul.inline-list.right
+            %li
+              %a{:href => "#{}"} Home
+            %li
+              %a{:href => "#"} About
+
+
+
+

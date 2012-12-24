@@ -1,2 +1,2 @@
-//= require jquery
-//= require bootstrap
+//= require foundation/jquery
+//=require foundation/index
